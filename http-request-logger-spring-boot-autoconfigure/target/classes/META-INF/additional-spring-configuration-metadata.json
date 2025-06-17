@@ -1,0 +1,21 @@
+{
+  "properties": [
+    {
+      "name": "http.request.logger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable HTTP request logging.",
+      "defaultValue": true
+    },
+    {
+      "name": "http.request.logger.include-headers",
+      "type": "java.lang.Boolean",
+      "description": "Include request headers in logs.",
+      "defaultValue": false
+    },
+    {
+      "name": "http.request.logger.exclude-patterns",
+      "type": "java.util.List",
+      "description": "URL patterns to exclude from logging."
+    }
+  ]
+}

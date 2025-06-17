@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "http.request.logger",
+      "type": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "http.request.logger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable HTTP request logging.",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "http.request.logger.exclude-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "URL patterns to exclude from logging.",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties"
+    },
+    {
+      "name": "http.request.logger.include-headers",
+      "type": "java.lang.Boolean",
+      "description": "Include request headers in logs.",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "http.request.logger.include-payload",
+      "type": "java.lang.Boolean",
+      "description": "Include request body in logs",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "http.request.logger.include-response",
+      "type": "java.lang.Boolean",
+      "description": "Include response body in logs",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "http.request.logger.log-level",
+      "type": "java.lang.String",
+      "description": "Log level (INFO, DEBUG, TRACE)",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": "INFO"
+    },
+    {
+      "name": "http.request.logger.max-payload-length",
+      "type": "java.lang.Integer",
+      "description": "Maximum payload length to log (to avoid huge logs)",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": 1000
+    }
+  ],
+  "hints": []
+}

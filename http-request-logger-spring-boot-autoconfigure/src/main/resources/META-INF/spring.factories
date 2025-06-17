@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerAutoConfiguration
