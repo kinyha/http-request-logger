@@ -7,7 +7,7 @@
 
     <groupId>io.github.kinyha</groupId>  <!-- Твой GitHub username -->
     <artifactId>http-request-logger-parent</artifactId>
-    <version>1.0.2</version>  <!-- Новая версия для Spring Boot 3 -->
+    <version>1.0.3</version>  <!-- Новая версия для Spring Boot 3 -->
     <packaging>pom</packaging>
 
     <!-- Новое - добавь это -->

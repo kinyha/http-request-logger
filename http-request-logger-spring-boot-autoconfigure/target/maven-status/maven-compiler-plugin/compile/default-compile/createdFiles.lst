@@ -1,4 +1,4 @@
 io\github\kinyha\requestlogger\autoconfigure\HttpRequestLoggerAutoConfiguration.class
-META-INF\spring-configuration-metadata.json
 io\github\kinyha\requestlogger\autoconfigure\HttpRequestLoggerProperties.class
 io\github\kinyha\requestlogger\autoconfigure\HttpRequestLoggingFilter.class
+META-INF\spring-configuration-metadata.json

@@ -16,6 +16,12 @@
       "name": "http.request.logger.exclude-patterns",
       "type": "java.util.List",
       "description": "URL patterns to exclude from logging."
+    },
+    {
+      "name": "http.request.logger.show-ascii-art",
+      "type": "java.lang.Boolean",
+      "description": "Show ASCII art for successful GET requests.",
+      "defaultValue": true
     }
   ]
 }

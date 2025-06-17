@@ -54,6 +54,13 @@
       "description": "Maximum payload length to log (to avoid huge logs)",
       "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
       "defaultValue": 1000
+    },
+    {
+      "name": "http.request.logger.show-ascii-art",
+      "type": "java.lang.Boolean",
+      "description": "Show ASCII art for successful GET requests.",
+      "sourceType": "io.github.kinyha.requestlogger.autoconfigure.HttpRequestLoggerProperties",
+      "defaultValue": true
     }
   ],
   "hints": []

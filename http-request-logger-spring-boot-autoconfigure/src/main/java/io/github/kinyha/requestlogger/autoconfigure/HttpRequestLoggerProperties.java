@@ -102,4 +102,18 @@ public class HttpRequestLoggerProperties {
     public void setLogLevel(String logLevel) {
         this.logLevel = logLevel;
     }
+
+    /**
+     * Show ASCII art for GET requests
+     */
+    private boolean showAsciiArt = true;
+
+    // Геттер и сеттер
+    public boolean isShowAsciiArt() {
+        return showAsciiArt;
+    }
+
+    public void setShowAsciiArt(boolean showAsciiArt) {
+        this.showAsciiArt = showAsciiArt;
+    }
 }
