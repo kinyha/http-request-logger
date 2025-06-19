@@ -24,14 +24,14 @@ public class HttpRequestLoggingFilter extends OncePerRequestFilter {
     // ASCII Art константа
     private static final String GET_SUCCESS_ART = """
     
-    ╔════════════════════════════════════════╗
-    ║          HTTP REQUEST SUCCESS          ║
-    ║                                        ║
-    ║    ✓ GET Request Completed             ║
-    ║    ✓ Status: 2xx                      ║
-    ║    ✓ Logger Working Perfectly          ║
-    ║                                        ║
-    ╚════════════════════════════════════════╝
+    ██╗  ██╗████████╗████████╗██████╗     ███████╗██╗   ██╗ ██████╗ ██████╗███████╗███████╗███████╗
+    ██║  ██║╚══██╔══╝╚══██╔══╝██╔══██╗    ██╔════╝██║   ██║██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝
+    ███████║   ██║      ██║   ██████╔╝    ███████╗██║   ██║██║     ██║     █████╗  ███████╗███████╗
+    ██╔══██║   ██║      ██║   ██╔═══╝     ╚════██║██║   ██║██║     ██║     ██╔══╝  ╚════██║╚════██║
+    ██║  ██║   ██║      ██║   ██║         ███████║╚██████╔╝╚██████╗╚██████╗███████╗███████║███████║
+    ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝         ╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝
+                                                                                                    
+         🚀 GET Request Successfully Processed! Status: 2xx | Logger Active 🚀                   
     
     """;
 
@@ -42,8 +42,22 @@ public class HttpRequestLoggingFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getServletPath();
-        return properties.getExcludePatterns().stream()
+        
+        // Check exclude patterns
+        boolean isExcluded = properties.getExcludePatterns().stream()
                 .anyMatch(pattern -> pathMatcher.match(pattern, path));
+        
+        // Skip static resources
+        if (path.matches(".+\\.(css|js|png|jpg|jpeg|gif|ico|woff|woff2|ttf|svg)$")) {
+            return true;
+        }
+        
+        // Skip common health check endpoints
+        if (path.startsWith("/actuator") || path.equals("/health") || path.equals("/ping")) {
+            return true;
+        }
+        
+        return isExcluded;
     }
 
     @Override
