@@ -23,9 +23,16 @@ public class HttpRequestLoggingFilter extends OncePerRequestFilter {
 
     // ASCII Art константа
     private static final String GET_SUCCESS_ART = """
-
-    ██                     │       - Senior Developer        │                   ██
-            
+    
+    ╔════════════════════════════════════════╗
+    ║          HTTP REQUEST SUCCESS          ║
+    ║                                        ║
+    ║    ✓ GET Request Completed             ║
+    ║    ✓ Status: 2xx                      ║
+    ║    ✓ Logger Working Perfectly          ║
+    ║                                        ║
+    ╚════════════════════════════════════════╝
+    
     """;
 
     public HttpRequestLoggingFilter(HttpRequestLoggerProperties properties) {
